@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 406598481fc07c54bbdcc527c9785200
+timeCreated: 1539015972
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Adidas Unity
+  fontNames:
+  - Adidas Unity
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
