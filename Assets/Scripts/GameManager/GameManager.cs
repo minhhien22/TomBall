@@ -144,6 +144,10 @@ public class GameManager : MonoBehaviour
         SoundController.instance.ClickSound();
         SceneManager.LoadScene(1);
     }
+    public void MoreGameBtn()
+    {
+        Application.OpenURL("https://mmgame.asia/");
+    }
     private IEnumerator _ActiveRound()
     {
         yield return new WaitForSeconds(1.0f);

@@ -41,7 +41,7 @@ public class BallControl : MonoBehaviour
             _CheckScorePlus = false;
             SoundController.instance.Scored();
         }
-        if(transform.position.y >5.0f || transform.position.y <-5.0f ||transform.position.x >5.0f || transform.position.x <-5.0f )
+        if(transform.position.y >5.0f || transform.position.y <-5.0f ||transform.position.x >4.0f || transform.position.x <-4.0f )
         {
             if(!_Check)
             {
