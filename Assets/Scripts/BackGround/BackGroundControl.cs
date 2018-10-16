@@ -39,13 +39,7 @@ public class BackGroundControl : MonoBehaviour
     }
     public void MoveIn() //move the statdim in  the screen
     {
-        //StadiumList[0].transform.DOMoveX(-5.64f, 0.5f);
         StadiumList[1].transform.DOMoveX(0.0f, 0.5f);
-       // StadiumList[1] = StadiumList[0];
-        //StadiumList.Remove(StadiumList[1]);
-        //GameManager.GameTracking = false;
-
-        //}
     }
     public void MoveOut()
     {

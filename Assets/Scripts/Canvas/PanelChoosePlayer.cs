@@ -51,7 +51,8 @@ public class PanelChoosePlayer : MonoBehaviour {
 	}
   public   void NextPlayerBtn()
     {
-        if(i<_PlayerImg.Count)
+        SoundController.instance.ClickSound();
+        if (i<_PlayerImg.Count)
         {
             i++;
             _PlayerList.sprite = _PlayerImg[i];
@@ -64,6 +65,7 @@ public class PanelChoosePlayer : MonoBehaviour {
     }
     public void _PreviousPlayer()
     {
+        SoundController.instance.ClickSound();
         if (i > 0)
         {
             i--;
@@ -81,6 +83,7 @@ public class PanelChoosePlayer : MonoBehaviour {
     }
     public void ChoosePlayer()
     {
+        SoundController.instance.ClickSound();
         PlayersType = (TYPE_PLAYERNAMES)i;
         PlayerPrefs.SetString("PlayerNames", Names[i]);
         if(PlayerPrefs.GetString("GameMode")== "Bot")

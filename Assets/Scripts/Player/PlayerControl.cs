@@ -27,17 +27,17 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Camera.main.ScreenToWorldPoint(Input.mousePosition).y < 0)
-        {
-            transform.position = new Vector3(Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, -2.0f, 2.21f),
-                                                       Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).y, -4.65f, 0.0f), 0);
-        }
+        //if (Camera.main.ScreenToWorldPoint(Input.mousePosition).y < 0)
+        //{
+        //    transform.position = new Vector3(Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, -2.0f, 2.21f),
+        //                                               Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).y, -4.65f, 0.0f), 0);
+        //}
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -2.17f, 2.17f), Mathf.Clamp(transform.position.y, -3.7f, 0.0f), 0);
 
-        //if (isClick)
-        //{
-        //    PlayerPositionControl();
-        //}
+        if (isClick)
+        {
+            PlayerPositionControl();
+        }
     }
     private void OnCollisionEnter2D(Collision2D _Col)
     {
@@ -49,7 +49,7 @@ public class PlayerControl : MonoBehaviour
             _BallPosition = _Col.gameObject.transform.position;
             _Col.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
             _Col.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
-            _Col.gameObject.GetComponent<Rigidbody2D>().AddForce(_DirectionPlayertoBall(transform.position, _Col.transform.position) * 100, ForceMode2D.Impulse);
+            _Col.gameObject.GetComponent<Rigidbody2D>().AddForce(_DirectionPlayertoBall(transform.position, _Col.transform.position) * 150, ForceMode2D.Impulse);
         }
         //PlayerPrefs.SetString("BallMoveFrom", "Player1");
         // Debug.Log(PlayerPrefs.GetString("BallMoveFrom"));
